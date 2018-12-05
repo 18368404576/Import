@@ -5,16 +5,32 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Import", "Import\Import.csproj", "{80208A9D-E57E-41B9-84D6-E319D539BB11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinImport", "WinImport\WinImport.csproj", "{4CB80005-F05E-4A8D-9015-16B9B9F7B95D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{80208A9D-E57E-41B9-84D6-E319D539BB11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80208A9D-E57E-41B9-84D6-E319D539BB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80208A9D-E57E-41B9-84D6-E319D539BB11}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{80208A9D-E57E-41B9-84D6-E319D539BB11}.Debug|x86.Build.0 = Debug|Any CPU
 		{80208A9D-E57E-41B9-84D6-E319D539BB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80208A9D-E57E-41B9-84D6-E319D539BB11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80208A9D-E57E-41B9-84D6-E319D539BB11}.Release|x86.ActiveCfg = Release|Any CPU
+		{80208A9D-E57E-41B9-84D6-E319D539BB11}.Release|x86.Build.0 = Release|Any CPU
+		{4CB80005-F05E-4A8D-9015-16B9B9F7B95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB80005-F05E-4A8D-9015-16B9B9F7B95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB80005-F05E-4A8D-9015-16B9B9F7B95D}.Debug|x86.ActiveCfg = Debug|x86
+		{4CB80005-F05E-4A8D-9015-16B9B9F7B95D}.Debug|x86.Build.0 = Debug|x86
+		{4CB80005-F05E-4A8D-9015-16B9B9F7B95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB80005-F05E-4A8D-9015-16B9B9F7B95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB80005-F05E-4A8D-9015-16B9B9F7B95D}.Release|x86.ActiveCfg = Release|x86
+		{4CB80005-F05E-4A8D-9015-16B9B9F7B95D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

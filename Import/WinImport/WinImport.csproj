@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4CB80005-F05E-4A8D-9015-16B9B9F7B95D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinImport</RootNamespace>
+    <AssemblyName>WinImport</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=9.0.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Aspose.Cells.dll.9.0.0.0\lib\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=17.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Aspose.Words.dll.17.7.0.0\lib\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.4, Version=4.0.20171.248, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\C1.Win.C1FlexGrid.4.0.20171.248\lib\C1.Win.C1FlexGrid.4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="C1.Win.C1TrueDBGrid.4, Version=4.0.20171.248, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\C1.Win.C1TrueDBGrid.4.0.20171.248\lib\C1.Win.C1TrueDBGrid.4.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\ICSharpCode.SharpZipLib.dll.0.86.0.518\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\itextsharp.dll.5.5.0.0\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\log4net.dll.1.2.15.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NPOI.dll.2.0.1.0\lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NPOI.OOXML.dll.2.0.1.0\lib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NPOI.OpenXml4Net.dll.2.0.1.0\lib\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NPOI.OpenXmlFormats.dll.2.0.1.0\lib\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.5.1.16461, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\TSES.Core.Client.Base.2.1.0\lib\net45\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TSES.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\TSES.Core.Base.2.1.0\lib\net45\TSES.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="TSES.Client.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\TSES.Core.Client.2.1.0\lib\net45\TSES.Client.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="TSES.Client.Controls, Version=1.0.0.26377, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\TSES.Core.Client.2.1.0\lib\net45\TSES.Client.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="TSES.Contract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\TSES.Core.Base.2.1.0\lib\net45\TSES.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="TSES.Server.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\TSES.Core.Client.ServerBase.2.1.0\lib\net45\TSES.Server.Base.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BSDEPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSDEPT.Designer.cs">
+      <DependentUpon>BSDEPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSPOSITION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSPOSITION.Designer.cs">
+      <DependentUpon>BSPOSITION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSPROCESS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSPROCESS.Designer.cs">
+      <DependentUpon>BSPROCESS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSPRODUCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSPRODUCT.Designer.cs">
+      <DependentUpon>BSPRODUCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSPROSTANDARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSPROSTANDARD.Designer.cs">
+      <DependentUpon>BSPROSTANDARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSSUPPLIER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSSUPPLIER.Designer.cs">
+      <DependentUpon>BSSUPPLIER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSWCTYPE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSWCTYPE.Designer.cs">
+      <DependentUpon>BSWCTYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSWORKCENTERINFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSWORKCENTERINFO.Designer.cs">
+      <DependentUpon>BSWORKCENTERINFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiffenctDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiffenctDocument.Designer.cs">
+      <DependentUpon>DiffenctDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMLIBRARY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMLIBRARY.designer.cs">
+      <DependentUpon>DMLIBRARY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECINFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ECINFO.Designer.cs">
+      <DependentUpon>ECINFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECINFOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ECINFOS.Designer.cs">
+      <DependentUpon>ECINFOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelManager.cs" />
+    <Compile Include="BSCLIENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSCLIENT.Designer.cs">
+      <DependentUpon>BSCLIENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmImport.Designer.cs">
+      <DependentUpon>fmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmDocument.Designer.cs">
+      <DependentUpon>fmDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HREMPLOYEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HREMPLOYEE.Designer.cs">
+      <DependentUpon>HREMPLOYEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HREMPLOYEEB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HREMPLOYEEB.Designer.cs">
+      <DependentUpon>HREMPLOYEEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HREMPLOYEES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HREMPLOYEES.Designer.cs">
+      <DependentUpon>HREMPLOYEES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRLIBRARY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRLIBRARY.Designer.cs">
+      <DependentUpon>HRLIBRARY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRWORKLICENSE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRWORKLICENSE.Designer.cs">
+      <DependentUpon>HRWORKLICENSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRWORKLICENSEA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRWORKLICENSEA.Designer.cs">
+      <DependentUpon>HRWORKLICENSEA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MRBOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MRBOM.Designer.cs">
+      <DependentUpon>MRBOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MRPRODUCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MRPRODUCT.designer.cs">
+      <DependentUpon>MRPRODUCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TCModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCModify.Designer.cs">
+      <DependentUpon>TCModify.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BSCLIENT.resx">
+      <DependentUpon>BSCLIENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSDEPT.resx">
+      <DependentUpon>BSDEPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSPOSITION.resx">
+      <DependentUpon>BSPOSITION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSPROCESS.resx">
+      <DependentUpon>BSPROCESS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSPRODUCT.resx">
+      <DependentUpon>BSPRODUCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSPROSTANDARD.resx">
+      <DependentUpon>BSPROSTANDARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSSUPPLIER.resx">
+      <DependentUpon>BSSUPPLIER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSWCTYPE.resx">
+      <DependentUpon>BSWCTYPE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSWORKCENTERINFO.resx">
+      <DependentUpon>BSWORKCENTERINFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiffenctDocument.resx">
+      <DependentUpon>DiffenctDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMLIBRARY.resx">
+      <DependentUpon>DMLIBRARY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECINFO.resx">
+      <DependentUpon>ECINFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECINFOS.resx">
+      <DependentUpon>ECINFOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmDocument.resx">
+      <DependentUpon>fmDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmImport.resx">
+      <DependentUpon>fmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HREMPLOYEE.resx">
+      <DependentUpon>HREMPLOYEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HREMPLOYEEB.resx">
+      <DependentUpon>HREMPLOYEEB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HREMPLOYEES.resx">
+      <DependentUpon>HREMPLOYEES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRLIBRARY.resx">
+      <DependentUpon>HRLIBRARY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRWORKLICENSE.resx">
+      <DependentUpon>HRWORKLICENSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRWORKLICENSEA.resx">
+      <DependentUpon>HRWORKLICENSEA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MRBOM.resx">
+      <DependentUpon>MRBOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MRPRODUCT.resx">
+      <DependentUpon>MRPRODUCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TCModify.resx">
+      <DependentUpon>TCModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
